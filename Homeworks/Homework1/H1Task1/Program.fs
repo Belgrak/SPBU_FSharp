@@ -1,6 +1,6 @@
 ﻿let factorial x =
     let rec compute x acc =
-        if x = 1 then acc else compute (x - 1) (acc * x)
+        if x = 0 then acc else compute (x - 1) (acc * x)
 
     compute x 1
 
