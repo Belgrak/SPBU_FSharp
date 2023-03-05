@@ -1,12 +1,9 @@
 ﻿let indexSearch list x =
     let rec compute list x acc =
         match list with
-        | head :: tail ->
-            if head = x then
-                Some(acc)
-            else
-                compute tail x (acc + 1)
         | [] -> None
+        | head :: _ when head = x -> Some acc
+        | _ :: tail -> compute tail x (acc + 1)
 
     compute list x 0
 
