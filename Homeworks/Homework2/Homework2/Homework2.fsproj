@@ -9,6 +9,7 @@
     <ItemGroup>
         <Compile Include="EvenCounter.fs" />
         <Compile Include="MapForBinaryTree.fs" />
+        <Compile Include="EvalForArithmeticTree.fs" />
     </ItemGroup>
 
 </Project>
