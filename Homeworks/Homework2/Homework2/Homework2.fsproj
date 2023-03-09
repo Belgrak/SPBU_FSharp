@@ -10,6 +10,7 @@
         <Compile Include="EvenCounter.fs" />
         <Compile Include="MapForBinaryTree.fs" />
         <Compile Include="EvalForArithmeticTree.fs" />
+        <Compile Include="PrimeNumbers.fs" />
     </ItemGroup>
 
 </Project>

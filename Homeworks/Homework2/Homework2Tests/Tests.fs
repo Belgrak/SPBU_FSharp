@@ -4,7 +4,9 @@ open NUnit.Framework
 open EvenCounter
 open BinaryTree
 open ArithmeticTreeEval
+open PrimeNumbers
 open FsCheck
+open FsUnit
 
 [<Test>]
 let TestEvenCounter () =
@@ -57,3 +59,9 @@ let TestArithmeticTreeEval () =
     Check.QuickThrowOnFailure multiplyTest
     Check.QuickThrowOnFailure complexSumTest
     Check.QuickThrowOnFailure complexMultiplyTest
+
+[<Test>]
+let TestPrimeNumbers () =
+    let getPrimeNumsSlice = [ for i in 0..9 -> Seq.item i (getPrimeNumbers ()) ]
+
+    getPrimeNumsSlice |> should equal [ 2; 3; 5; 7; 11; 13; 17; 19; 23; 29 ]
