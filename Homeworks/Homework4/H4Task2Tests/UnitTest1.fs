@@ -13,4 +13,4 @@ let TestCorrectness () =
         |> List.map (fun x -> x testNum testList)
         |> checkEquality
     
-    areSame
+    Check.QuickThrowOnFailure areSame
