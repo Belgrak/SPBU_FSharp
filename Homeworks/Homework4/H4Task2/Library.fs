@@ -7,5 +7,3 @@ let func1 x = List.map (fun y -> y * x)
 let func2 x = List.map ((*) x)
 
 let func3 = List.map << (*)
-
-printf $"{func3 -1 [0; -1]}"
