@@ -29,7 +29,7 @@ let rec evalMoves (startPos: int * int) movesList =
                 let! r = evalMoves (fst startPos, snd startPos + i) tail
                 return r
             | Bottom i ->
-                if fst startPos >= i then
+                if snd startPos >= i then
                     let! r = evalMoves (fst startPos, snd startPos - i) tail
                     return r
         }
