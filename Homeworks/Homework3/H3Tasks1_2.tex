@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{mathtools}
+\usepackage[english, russian]{babel}
 
 \title{Lambda. Homework 3}
 \author{Kargin Gleb}
@@ -12,15 +13,27 @@
 
     \section{First Task}
     $
-    ((\lambda a.(\lambda b.b b) (\lambda b.b b)) b) ((\lambda c.(c b)) (\lambda a.a)) \xRightarrow[\beta]{} ((\lambda b.b b) (\lambda b.b b)) ((\lambda c.(c b)) (\lambda a.a)) \xRightarrow[\beta]{} ((\lambda b.b b) (\lambda b.b b)) ((\lambda a.a) b) \xRightarrow[\beta]{} (\lambda b.b b) (\lambda b.b b) b
+    ((\lambda a.(\lambda b.b b) (\lambda b.b b)) b) ((\lambda c.(c b)) (\lambda a.a)) \xRightarrow[\beta]{} ((\lambda b.b b) (\lambda b.b b)) ((\lambda c.(c b)) (\lambda a.a))
+    $
+
+    Заметим, что в результате нормальной стратегии не происходит сокращение терма. Таким образом, можно сделать вывод, что нормальной формы нет.
+
+    Продолжим редуцировать:
+
+    $
+    ((\lambda b.b b) (\lambda b.b b)) ((\lambda c.(c b)) (\lambda a.a))
+    \xRightarrow[\beta]{} ((\lambda b.b b) (\lambda b.b b)) ((\lambda a.a) b) \xRightarrow[\beta]{} (\lambda b.b b) (\lambda b.b b) b
+    \xRightarrow[\beta]{} \Omega b
     $
 
 
     \section{Second Task}
     \sloppy
     $
-    S K K = (\lambda x y z.x z (y z)) (\lambda x y.x) (\lambda x y.x) \xRightarrow[\beta]{} (\lambda y z.(\lambda x y.x) z (y z)) (\lambda x y.x) \xRightarrow[\beta]{} (\lambda z. (\lambda x y.x) z ((\lambda x y.x)z)) \xRightarrow[\beta]{} (\lambda z. z) = I
+    S K K = (\lambda x y z.x z (y z)) (\lambda x y.x) (\lambda x y.x) \xRightarrow[\beta]{} (\lambda y z.(\lambda x y.x) z (y z)) (\lambda x y.x) \xRightarrow[\beta]{} (\lambda z. (\lambda x y.x) z ((\lambda x y.x)z))
+    \xRightarrow[\beta]{} (\lambda z. (\lambda y.z) ((\lambda x y.x)z))
+    \xRightarrow[\beta]{} (\lambda z. (\lambda ((\lambda x y.x)z).z) )
+    \xRightarrow[\beta]{} (\lambda z. z) = I
     $
-
 
 \end{document}
