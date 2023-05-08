@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Grammar}
+\author{Belgrak }
+\date{May 2023}
+
+\begin{document}
+
+    \maketitle
+
+    program ::= definition $\vert$ identifier $\vert$ definition program
+
+    definition ::= "let" identifier "=" term
+
+    term ::= application $\vert$ abstraction
+
+    application ::= atom $\vert$ application atom
+
+    atom ::= identifier $\vert$ parenthesized-term
+
+    abstraction ::= "\textbackslash" parameters "." term
+
+    parameters ::= identifier $\vert$ identifier parameters
+
+    identifier ::= letter $\vert$ identifier letter-or-digit
+
+    letter ::= "a" $\vert$ "b" $\vert$ ... $\vert$ "z" $\vert$ "A" $\vert$ "B" $\vert$ ... $\vert$ "Z"
+
+    letter-or-digit ::= letter $\vert$ digit
+
+    digit ::= "0" $\vert$ "1" $\vert$ ... $\vert$ "9"
+
+    parenthesized-term ::= "(" term ")"
+    \newline
+
+    Example:
+
+    let I = \textbackslash x.x
+
+    I
+    \newline
+
+    program $\rightarrow$ definition program
+
+    $\vert$ definition $\rightarrow$ "let" identifier "=" term
+
+    $\vert$ $\vert$ "let" identifier "=" term $\rightarrow$ identifier
+
+    $\vert$ $\vert$ $\vert$ identifier $\rightarrow$ "I"
+
+    $\vert$ $\vert$ "let" identifier "=" term $\rightarrow$ term
+
+    $\vert$ $\vert$ $\vert$ term $\rightarrow$ abstraction
+
+    $\vert$ $\vert$ $\vert$ $\vert$ abstraction $\rightarrow$ "\textbackslash" parameters "." term
+
+    $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ "\textbackslash" parameters "." term $\rightarrow$ parameters
+
+    $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ parameters $\rightarrow$ identifier
+
+    $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ identifier $\rightarrow$ "x"
+
+    $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ "\textbackslash" parameters "." term $\rightarrow$ term
+
+    $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ term $\rightarrow$ application
+
+    $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ application $\rightarrow$ atom
+
+    $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ atom $\rightarrow$ identifier
+
+    $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ identifier $\rightarrow$ "x"
+
+    $\vert$ program $\rightarrow$ identifier
+
+    $\vert$ $\vert$ identifier $\rightarrow$ "I"
+
+    $\vert$ $\vert$ $\vert$ "I" $\rightarrow$ term $\rightarrow$ \textbackslash x.x
+
+\end{document}
