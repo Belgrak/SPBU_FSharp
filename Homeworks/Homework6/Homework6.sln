@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "H6Task1", "H6Task1\H6Task1.fsproj", "{3D15FB45-6042-4476-BE74-2AA5950F7E4F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "H6Tests", "H6Tests\H6Tests.fsproj", "{0F1602CD-C8BF-4340-BA99-913B251B3E47}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "H6Task2", "H6Task2\H6Task2.fsproj", "{4CD80D4A-7396-4FEE-A7D1-534547BA2076}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D15FB45-6042-4476-BE74-2AA5950F7E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D15FB45-6042-4476-BE74-2AA5950F7E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D15FB45-6042-4476-BE74-2AA5950F7E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D15FB45-6042-4476-BE74-2AA5950F7E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F1602CD-C8BF-4340-BA99-913B251B3E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1602CD-C8BF-4340-BA99-913B251B3E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F1602CD-C8BF-4340-BA99-913B251B3E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1602CD-C8BF-4340-BA99-913B251B3E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD80D4A-7396-4FEE-A7D1-534547BA2076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD80D4A-7396-4FEE-A7D1-534547BA2076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD80D4A-7396-4FEE-A7D1-534547BA2076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD80D4A-7396-4FEE-A7D1-534547BA2076}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
